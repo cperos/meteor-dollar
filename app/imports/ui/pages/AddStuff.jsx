@@ -26,7 +26,7 @@ class AddStuff extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, quantity, condition } = data;
+    const { name, quantity, condition, value } = data;
     const owner = Meteor.user().username;
     Stuffs.collection.insert({ name, quantity, condition, value, owner },
       (error) => {
